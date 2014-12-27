@@ -1,0 +1,102 @@
+// ==================================================
+// Typography rules
+// ==================================================
+
++font-face("BrandonRegular", font-files("brandon_reg-webfont.woff", woff, "brandon_reg-webfont.ttf", truetype, "brandon_reg-webfont.svg#BrandonRegular", svg), "brandon_reg-webfont.eot", normal, normal)
++font-face("BrandonBlack", font-files("brandon_blk-webfont.woff", woff, "brandon_blk-webfont.ttf", truetype, "brandon_blk-webfont.svg#BrandonBlack", svg), "brandon_blk-webfont.eot", normal, normal)
+
+html
+  font-size: 62.5%
+  -webkit-font-smoothing: antialiased
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1)
+  -moz-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%
+
+body
+  +rem(font-size, 18px)
+  font-family: "BrandonRegular"
+  color: map-get($colors, darkbrown)
+
+a
+  color: map-get($colors, orange)
+  text-decoration: none
+  &:hover, &:focus, &:active
+    text-decoration: underline
+
+i, em
+  font-style: italic
+
+img
+  display: block
+  line-height: 1em
+
+h1
+  +rem(font-size, 40px)
+  font-weight: 900
+  margin: 30px 0 0
+  text-align: center
+  text-transform: uppercase
+
+h2
+  +rem(font-size, 40px)
+  color: #fff
+  font-family: "BrandonBlack"
+  margin: 0 0 55px
+  text-align: center
+  text-transform: uppercase
+  &.cream
+    color: map-get($colors, cream)
+  &.brown
+    color: map-get($colors, brown)
+  &.orange
+    color: map-get($colors, orange)
+
+h3
+  +rem(font-size, 24px)
+  line-height: 1.5em
+  margin: 0 0 30px
+  text-transform: uppercase
+
+h4
+  +rem(font-size, 24px)
+  color: #fff
+  font-family: "BrandonBlack"
+  line-height: 1.2em
+  text-transform: uppercase
+
+h5
+  +rem(font-size, 18px)
+  color: map-get($colors, orange)
+  font-family: "BrandonBlack"
+  line-height: 1.2em
+  margin: 35px 0 0
+
+h6
+  +rem(font-size, 22px)
+  color: map-get($colors, brown)
+  font-weight: 800
+  margin-bottom: 10px
+  text-transform: uppercase
+
+p
+  +rem(font-size, 20px)
+  line-height: 28px
+  margin-bottom: 20px
+  text-align: justify
+
+address
+  line-height: 1.2em
+
+b,
+strong
+  font-family: "BrandonBlack"
+  font-weight: normal
+
+ul li
+  +rem(font-size, 16px)
+  +rem(line-height, 28px)
+  color: #7e878f
+  margin: 15px 0 0
+  &:first-child
+    margin-top: 0

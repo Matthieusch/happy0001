@@ -1,0 +1,52 @@
+// ==================================================
+// Buttons
+// ==================================================
+
+#snap-toggle
+  +transition(transform 0.3s ease)
+  +rem(font-size, 18px)
+  background: map-get($colors, orange)
+  color: map-get($colors, darkbrown)
+  cursor: pointer
+  left: 0
+  position: fixed
+  top: 0
+  z-index: 10
+  &:before
+    height: 50px
+    line-height: 50px
+    text-align: center
+    width: 50px
+  &.active
+    +transform(translate3d(265px, 0, 0))
+    &:before
+      content: "\f00d"
+  &.nav-up
+    +transform(translate3d(0, -80px, 0))
+    &.active
+      +transform(translate3d(265px, 0, 0))
+  &.nav-down
+    +transform(translate3d(0, 0, 0))
+    &.active
+      +transform(translate3d(265px, 0, 0))
+
+a.btn
+  +rem(font-size, 20px)
+  +single-transition(all, 0.5s)
+  border: 3px solid map-get($colors, cream)
+  color: map-get($colors, cream)
+  display: block
+  font-family: "BrandonBlack"
+  margin-top: 190px
+  padding: 20px
+  text-align: center
+  text-transform: uppercase
+  width: 250px
+  span:before
+    +rem(font-size, 18px)
+    margin-right: 10px
+  &:hover, &:focus, &:active
+    border-color: map-get($colors, orange)
+    color: map-get($colors, orange)
+    text-decoration: none
+

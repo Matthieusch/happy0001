@@ -1,0 +1,87 @@
+// ==================================================
+// Class & placeholders helpers
+// ==================================================
+
+// Class
+// ==================================================
+
+@mixin single-transition($property, $duration)
+  +transition-property($property)
+  +transition-duration($duration)
+
+// Class
+// ==================================================
+
+.align-center
+  margin-left: auto
+  margin-right: auto
+
+.align-left
+  float: left
+
+.align-right
+  float: right
+
+.clear-both
+  clear: both
+
+.element-invisible
+  display: none !important
+
+.hide-text
+  +hide-text
+
+.highlighted
+  color: map-get($colors, primary) !important
+
+.text-center
+  text-align: center
+
+.text-justify
+  text-align: justify
+
+.text-left
+  text-align: left
+
+.text-right
+  text-align: right
+
+.text-underline
+  text-decoration: underline
+
+.mt-20
+  margin-top: 20px
+
+.mb-10
+  margin-bottom: 10px
+
+.mb-20
+  margin-bottom: 20px
+
+.lightblue
+  background: map-get($colors, lightblue)
+
+.nopadding
+  padding: 0 !important
+  margin: 0 !important
+
+.box
+  padding: 100px 0 110px
+  &.brown
+    background: map-get($colors, brown)
+  &.brownplus
+    background: map-get($colors, brownplus)
+  &.lightbrown
+    background: map-get($colors, lightbrown)
+  &.purple
+    background: map-get($colors, purple)
+  &.orange
+    background: map-get($colors, orange)
+  &.cream
+    background: map-get($colors, cream)
+
+// Placeholders
+// ==================================================
+
+%force-hardware-acceleration
+  -webkit-transform: translateZ(0)

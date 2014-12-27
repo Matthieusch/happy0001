@@ -1,0 +1,25 @@
+{
+  "name": "Happy Hours",
+  "description": "Happy Hours coworking !",
+  "version": "0.0.0",
+  "homepage": "index.php",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~1.9",
+    "snapjs": "2.0.0-rc1",
+    "modernizr": "2.8.3",
+    "jquery.browser": "~0.0.7",
+    "smooth-scroll": "https://github.com/cferdinandi/smooth-scroll.git"
+  },
+  "authors": [
+    "Matthieu Schneider matthieu.snd@gmail.com"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "resolutions": {
+    "snapjs": "2.0.0-rc1"
+  }
+}
