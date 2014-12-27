@@ -68,6 +68,13 @@ var app = {
     self.functions.renderMap();
 
     /**
+     * @desc: launch slider
+     */
+    $('#slider').bxSlider({
+      controls : false
+    });
+
+    /**
      * functions.js
      * @name: placeholder()
      * @desc: Search placeholder fallback
@@ -103,7 +110,7 @@ var app = {
       this.debugEventMessages.push(messages);
 
       console.clear();
-      
+
       console.log('%cEvent - '+date.getHours()+'h'+date.getMinutes()+'mn'+date.getSeconds()+'s', 'color: #a6c628');
       for(var key in this.debugEventMessages){
         if(typeof this.debugEventMessages[key] === 'object'){

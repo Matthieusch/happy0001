@@ -21,6 +21,7 @@
   <meta name="apple-mobile-web-app-title" content="Happy Hours - Coworking tranquille à Rennes">
 
   <link rel="stylesheet" href="/assets/css/screen.css">
+  <link rel="stylesheet" href="/bower_components/bolster.bxSlider/jquery.bxslider.css">
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicons/apple-touch-icon-57x57.png">
@@ -58,6 +59,7 @@
   <script src="/bower_components/jquery/jquery.min.js"></script>
   <script src="/bower_components/jquery.browser/dist/jquery.browser.min.js"></script>
   <script src="/bower_components/snapjs/dist/2.0.0-rc1/snap.js"></script>
+  <script src="/bower_components/bolster.bxSlider/jquery.bxslider.min.js"></script>
   <script src="/js/main.js"></script>
   <script src="/js/events.js"></script>
   <script src="/js/functions.js"></script>

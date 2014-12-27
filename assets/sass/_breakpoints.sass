@@ -3,10 +3,16 @@
 +breakpoint($screen-sm-min)
   p
     text-align: left
+  #plans
+    background: url(../img/plans-background.png) repeat-y center 0
+    #plan-price
+      background: transparent
 
 // Medium screen / desktop : > 992px
 // ==================================================
 +breakpoint($screen-md-min)
+  h3
+    +rem(font-size, 24px)
   #snap-toggle
     display: none
   .snap-drawers
