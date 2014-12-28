@@ -249,7 +249,7 @@
         </div>
         <div class="col-xs-12 spacer40"></div>
         <div class="col-xs-12">
-          <p class="pull-right"><sup>*</sup> Tous les champs sont obligatoire.</p>
+          <p class="pull-right"><sup>*</sup> Tous les champs sont obligatoires.</p>
         </div>
       </form>
     </div>
