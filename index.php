@@ -1,3 +1,65 @@
+<?php session_start(); ?>
+<?php
+
+include('services/coworkers.php');
+include('inc/functions.php');
+require('lib/phpmailer/class.phpmailer.php');
+
+$name = isset($_POST['name']) ? $_POST['name'] : "";
+$email = isset($_POST['email']) ? $_POST['email'] : "";
+$subject = isset($_POST['subject']) ? $_POST['subject'] : "";
+$message = isset($_POST['message']) ? $_POST['message'] : "";
+
+$success = false;
+
+// POST DATA DETECTED
+if(!empty($_POST)){
+
+  // CHECK FORM ERRORS
+  if(empty($name)) $errors['name'] = _('Nom');
+  if(empty($email) || !eregi('^[A-Z0-9._%-]+@[A-Z0-9._%-]+\.[A-Z]{2,6}$', $email)) $errors['email'] = _('E-mail');
+  if(empty($subject)) $errors['subject'] = _('Sujet');
+  if(empty($message)) $errors['message'] = _('Message');
+
+  // CHECK CAPTCHA
+  if (!empty($_REQUEST['captcha'])) {
+    if (empty($_SESSION['captcha']) || trim(strtolower($_REQUEST['captcha'])) != $_SESSION['captcha']) {
+      $errors['captcha'] = _('Captcha');
+      $style = "background-color: #FF606C";
+    }
+
+    $request_captcha = htmlspecialchars($_REQUEST['captcha']);
+    unset($_SESSION['captcha']);
+  }
+  else {
+    $errors['captcha'] = _('Captcha');
+  }
+
+  // GO SEND MAILS NOW !
+  if(empty($errors)){
+
+    //SEND EACH MAIL ONE BY ONE
+    $mail = new PHPMailer();
+    $mail->CharSet = 'UTF-8';
+    $mail->From = $email;
+    $mail->FromName = $name;
+    $mail->Subject = $subject;
+    $mail->Body = $message;
+    $mail->AddAddress('happyhours.asso@gmail.com');
+    if(!$mail->Send()) {
+      $success = true;
+    }
+    else {
+      $success = 'error';
+    }
+    // CLEAR FORM DATA AND DISPLAY SUCCESSFUL SENDING MESSAGE
+    if($success){
+      // Redirect and set $_GET variable
+      header('Location:'.$_SERVER['PHP_SELF'].'#contact?success=true');
+    }
+  }
+}
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="fr" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="fr" class="lt-ie9 lt-ie8"> <![endif]-->
@@ -58,11 +120,23 @@
 
   <script src="/bower_components/jquery/jquery.min.js"></script>
   <script src="/bower_components/jquery.browser/dist/jquery.browser.min.js"></script>
+  <script src="/bower_components/jquery.cookie/jquery.cookie.js"></script>
   <script src="/bower_components/snapjs/dist/2.0.0-rc1/snap.js"></script>
   <script src="/bower_components/bolster.bxSlider/jquery.bxslider.min.js"></script>
+  <script src="/bower_components/eu-cookie-alert/eu-cookie-alert.min.js"></script>
   <script src="/js/main.js"></script>
   <script src="/js/events.js"></script>
   <script src="/js/functions.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58056114-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
 </body>
 
 </html>

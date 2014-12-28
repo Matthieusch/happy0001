@@ -56,19 +56,19 @@
               <div>
                 <img src="/assets/img/nomade.png" width="100%" alt="icône nomade" />
               </div>
-              <h6>Boissons à volonté</h6>
+              <h6>Boissons<br />à volonté</h6>
             </div>
             <div class="item col-xs-12 col-sm-6 col-md-3">
               <div>
                 <img src="/assets/img/nomade.png" width="100%" alt="icône nomade" />
               </div>
-              <h6>Connexion haut débit</h6>
+              <h6>Connexion<br />haut débit</h6>
             </div>
             <div class="item col-xs-12 col-sm-6 col-md-3">
               <div>
                 <img src="/assets/img/nomade.png" width="100%" alt="icône nomade" />
               </div>
-              <h6>Salle de réunion</h6>
+              <h6>Salle de<br />réunion</h6>
             </div>
           </div>
         </div>
@@ -81,7 +81,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 text-center">
-        <h2 class="brown">Plans</h2>
+        <h2 class="brown">Tarifs</h2>
       </div>
       <div class="item col-xs-12 col-sm-6 col-md-5 col-lg-3 col-lg-offset-2">
         <div class="item-container">
@@ -138,7 +138,6 @@
         <h2 class="cream">Coworkers</h2>
       </div>
       <?php
-        include('services/coworkers.php');
         foreach ($coworkers as $key => $coworker) {
           print '<figure class="col-xs-12 col-sm-6 col-md-3">';
             print '<img class="align-center" src="/assets/img/coworkers/' . $coworker['portrait'] . '" width="160" height="160" alt="' . $coworker['name'] . '" />';
@@ -163,7 +162,7 @@
       <div class="col-xs-12 text-center">
         <h2 class="brown">À propos</h2>
       </div>
-      <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-0 col-lg-5">
+      <div class="col-xs-12 col-md-6 col-lg-5">
         <figure>
           <img class="align-center" src="/assets/img/clock-rabbit.png" width="269" height="342" alt="Lapin blanc !">
         </figure>
@@ -171,7 +170,7 @@
           <strong>Happy Hours</strong> est une association loi 1901 ayant pour objet principal de gérer et de développer un espace de “coworking ”, espace de travail partagé et <strong>créateur d’un lien social favorisant l’échange</strong> et l’ouverture entre ses membres.
         </h3>
       </div>
-      <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-0 col-lg-5 col-lg-offset-2">
+      <div class="col-xs-12 col-md-6 col-lg-6 col-lg-offset-1">
         <p>
           Si le nom de l’association est évocateur, il s’agit pour nous de rendre le temps de travail agréable à travers une ambiance sociabilisante et des locaux confortables, plaisants et accessibles.
         </p>
@@ -198,6 +197,61 @@
       <div class="col-xs-12 text-center">
         <h2 class="cream">Contact</h2>
       </div>
+      <p class="text-center col-xs-12">
+        N’hésitez pas à nous contacter pour toute information<br />
+        <a href="tel:0673035051">06 73 03 50 51</a> (Gwénolé)  ou  <a href="tel:0659097429">06 59 09 74 29</a> (Alexis)
+      </p>
+      <div class="col-xs-12 spacer140"></div>
+      <?php
+        if(!empty($errors)){
+          print '<p class="col-xs-12 bg-orange"><strong>'._('Erreur, ').' </strong> '._('veuillez vérifier les champs').' : <br /><br />- <span class="required">'.implodeLast($errors, '</span>,<br />- <span class="required">', '</span><br />- <span class="required">').'</span></p>';
+        }
+      ?>
+      <?php
+        if(isset($_GET['success']) && $_GET['success'] == 'true' && empty($_POST)){
+          print '<p class="col-xs-12 bg-orange text-center">Le message a bien été envoyé.<strong> Merci !</strong>';
+        }
+        else {
+          if($success === 'error'){
+            print '<p class="bg-orange text-center">Le message n\'a pu être envoyé.</strong>';
+          }
+        }
+      ?>
+      <form action="/index.php#contact" method="POST">
+        <div class="col-xs-12 col-md-6">
+          <label for="name" class="col-xs-12 col-md-4 col-lg-3">Nom <sup>*</sup></label>
+          <input type="text" name="name" id="name" value="<?php print $name; ?>" class="col-xs-12 col-md-8 col-lg-9" />
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <label for="email" class="col-xs-12 col-md-4 col-lg-3">E-mail <sup>*</sup></label>
+          <input type="email" name="email" id="email" value="<?php print $email; ?>" class="col-xs-12 col-md-8 col-lg-9" />
+        </div>
+        <div class="col-xs-12 spacer20"></div>
+        <div class="col-xs-12 col-md-6">
+          <label for="subject" class="col-xs-12 col-md-4 col-lg-3">Sujet <sup>*</sup></label>
+          <input type="text" name="subject" id="subject" value="<?php print $subject; ?>" class="col-xs-12 col-md-8 col-lg-9" />
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <label for="message" class="col-xs-12 col-md-4 col-lg-3">Message <sup>*</sup></label>
+          <textarea name="message" id="message" class="col-xs-12 col-md-8 col-lg-9" rows="5"><?php print $message; ?></textarea>
+        </div>
+        <div class="col-xs-12 spacer20"></div>
+        <div class="col-xs-12 col-md-6 col-md-offset-6">
+          <img src="/lib/captcha/captcha.php" id="captcha" class="col-xs-12 col-md-8 col-md-offset-4 col-lg-9 col-lg-offset-3"/>
+          <div class="col-xs-12 spacer20"></div>
+          <label for="captcha-form" class="col-xs-12 col-md-4 col-lg-3">Captcha <sup>*</sup></label>
+          <input type="text" name="captcha" id="captcha-form" autocomplete="off" class="col-xs-12 col-md-8 col-lg-9" />
+          <span class="helper-block col-xs-12 col-md-8 col-md-offset-4 col-lg-9 col-lg-offset-3">Recopiez le texte présent dans l'image ci-dessus.<br /><a href="#" onclick="document.getElementById('captcha').src='/lib/captcha/captcha.php?'+Math.random(); document.getElementById('captcha-form').focus();" id="change-image">Illisible ? Changer le texte !</a></span>
+        </div>
+        <div class="col-xs-12 spacer20"></div>
+        <div class="col-xs-12">
+          <input type="submit" value="Envoyer" class="btn pull-right" />
+        </div>
+        <div class="col-xs-12 spacer40"></div>
+        <div class="col-xs-12">
+          <p class="pull-right"><sup>*</sup> Tous les champs sont obligatoire.</p>
+        </div>
+      </form>
     </div>
   </div>
 </div>

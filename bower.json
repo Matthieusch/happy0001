@@ -10,7 +10,8 @@
     "modernizr": "2.8.3",
     "jquery.browser": "~0.0.7",
     "smooth-scroll": "https://github.com/cferdinandi/smooth-scroll.git",
-    "bolster.bxSlider": "~0.1.1"
+    "bolster.bxSlider": "~0.1.1",
+    "eu-cookie-alert": "~0.0.1"
   },
   "authors": [
     "Matthieu Schneider matthieu.snd@gmail.com"

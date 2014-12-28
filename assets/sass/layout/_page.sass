@@ -111,7 +111,9 @@ body
     width: 100%
   .bg-orange
     background: map-get($colors, orange)
+    bottom: 30px
     padding: 15px
+    position: absolute
 
 #space
   .bx-wrapper
@@ -245,11 +247,16 @@ body
     &:hover img
       +transform(scale(1.2))
 
-
-
 #about
   .row > div + div img
     margin-bottom: 30px
+
+#contact
+  p
+    color: map-get($colors, cream)
+  .bg-orange
+    color: map-get($colors, brown)
+    padding: 15px
 
 footer
   +rem(font-size, 20px)
@@ -260,3 +267,13 @@ footer
     color: map-get($colors, orange)
     &:hover, &:focus, &:active, &.active
       text-decoration: underline
+  p
+    margin-bottom: 0
+    text-align: left
+
+#ap_eucookiealert
+  background: #000
+  background: rgba(0, 0, 0, 0.8)
+  color: map-get($colors, cream)
+  padding: 10px 15px
+  z-index: 10

@@ -1,8 +1,6 @@
 // Small screen / tablet : > 768px
 // ==================================================
 +breakpoint($screen-sm-min)
-  p
-    text-align: left
   #plans
     background: url(../img/plans-background.png) repeat-y center 0
     #plan-price
@@ -11,6 +9,8 @@
 // Medium screen / desktop : > 992px
 // ==================================================
 +breakpoint($screen-md-min)
+  label
+    padding-left: 15px !important
   h3
     +rem(font-size, 24px)
   #snap-toggle
@@ -50,6 +50,9 @@
     +transform(translate3d(0, 0, 0) !important)
   #introduction
     height: 960px
+  #situation .bg-orange
+    bottom: inherit
+    position: relative
   #about
     h2
       margin-bottom: 120px
