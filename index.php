@@ -55,7 +55,7 @@ if(!empty($_POST)){
     // CLEAR FORM DATA AND DISPLAY SUCCESSFUL SENDING MESSAGE
     if($success){
       // Redirect and set $_GET variable
-      header('Location:'.$_SERVER['PHP_SELF'].'#contact?success=true');
+      header('Location:'.$_SERVER['PHP_SELF'].'?success=true#contact');
     }
   }
 }
@@ -104,6 +104,9 @@ if(!empty($_POST)){
   <meta name="msapplication-TileColor" content="#2b5797">
   <meta name="msapplication-TileImage" content="/assets/img/favicons/mstile-144x144.png">
   <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+
+  <!-- Authors -->
+  <link type="text/plain" rel="author" href="http://happyh0urs.com//humans.txt" />
 
   <script src="/bower_components/modernizr/modernizr.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?libraries=visualization&key=AIzaSyD88o6mq4vTL93m0B_uF9ko0TkqGfi72Qw"></script>
