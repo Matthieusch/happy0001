@@ -88,7 +88,7 @@
           <div class="item-top bg-lightcream"></div>
           <div class="item-content bg-lightcream text-center">
             <img src="/assets/img/nomade.png" class="align-center" width="102px" height="86px" alt="Icône nomade" />
-            <h2>Nomade<sup>*</sup></h2>
+            <h2>Nomade <sup>*</sup></h2>
             <div class="prices bg-purple">
               <div class="price">15 €</div>
               <div class="price-vat">18 € TTC</div>
@@ -108,7 +108,7 @@
           <div class="item-top bg-cream"></div>
           <div class="item-content bg-cream text-center">
             <img id="resident" src="/assets/img/resident.png" class="align-center" width="69px" height="100px" alt="Icône permanent" />
-            <h2>Permanent<sup>*</sup></h2>
+            <h2>Résident <sup>*</sup></h2>
             <div class="prices bg-orange">
               <div class="price">200 €</div>
               <div class="price-vat">240 € TTC</div>

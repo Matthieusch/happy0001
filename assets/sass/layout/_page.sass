@@ -93,7 +93,7 @@ body
   background: map-get($colors, cream)
 
 #introduction
-  background: url("../img/box-1-background.jpg") no-repeat center center
+  background: url("../img/box-1-background.jpg") repeat-x center center
   display: table
   height: 480px
   width: 100%
@@ -112,7 +112,7 @@ body
   .bg-orange
     background: map-get($colors, orange)
     bottom: 30px
-    padding: 15px
+    padding: 30px 15px
     position: absolute
 
 #space
@@ -143,6 +143,8 @@ body
       &.active
         background: #fff
         border-color: transparent
+    img
+      margin: 0 auto
   .item
     margin-top: 50px
     text-align: center
