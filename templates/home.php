@@ -83,7 +83,7 @@
       <div class="col-xs-12 text-center">
         <h2 class="brown">Tarifs</h2>
       </div>
-      <div class="item col-xs-12 col-sm-6 col-md-5 col-lg-3 col-lg-offset-2">
+      <div class="item col-xs-12 col-sm-6 col-md-5 col-lg-4 col-lg-offset-1">
         <div class="item-container">
           <div class="item-top bg-lightcream"></div>
           <div class="item-content bg-lightcream text-center">
@@ -103,7 +103,7 @@
         </div>
         <p class="description text-center">Le coworker s’installe de manière “plug&play”, dans un espace mis à disposition et spécialement prévu pour les travailleurs nomades.</p>
       </div>
-      <div class="item col-xs-12 col-sm-6 col-md-5 col-md-offset-2 col-lg-3 col-lg-offset-2">
+      <div class="item col-xs-12 col-sm-6 col-md-5 col-md-offset-2 col-lg-4 col-lg-offset-2">
         <div class="item-container">
           <div class="item-top bg-cream"></div>
           <div class="item-content bg-cream text-center">

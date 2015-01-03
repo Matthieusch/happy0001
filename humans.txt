@@ -1,18 +1,18 @@
 /* TEAM */
 
-Intégrateur: Matthieu Schneider
+Front-end web developer: Matthieu Schneider
 Contact: matthieu.snd [at] gmail.com
 Twitter: @Matthieusch
 From: Rennes, Bretagne, France
 
-Web designer: Jérémy Paul
+Web designer: Jeremy Paul
 Contact: jrmypaul [at] gmail.com
 Twitter: @jrmypaul
 From: Rennes, Bretagne, France
 
-Web designer: Gwénolé Jaffrédou
+Web designer: Gwenole Jaffredou
 Contact: gwenole.jaffredou [at] gmail.com
-Twitter: @jrmypaul
+Twitter: @gweno
 From: Rennes, Bretagne, France
 
 /* THANKS */
