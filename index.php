@@ -116,7 +116,15 @@ if(!empty($_POST)){
   <?php include('inc/header.php'); ?>
 
   <div id="content" class="snap-content">
-    <?php include('templates/home.php'); ?>
+    <?php 
+      $host = $_SERVER['REQUEST_URI'];
+      if($host !== '/conditions-generales-d-utilisation'){
+        include('templates/home.php');
+      }
+      else {
+        include('templates/page.php');
+      }
+    ?>
 
     <?php include('inc/footer.php'); ?>
   </div>

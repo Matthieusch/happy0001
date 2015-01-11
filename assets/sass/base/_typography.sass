@@ -52,12 +52,18 @@ h2
     color: map-get($colors, brown)
   &.orange
     color: map-get($colors, orange)
+  span
+    +rem(font-size, 30px)
+    font-family: "BrandonRegular"
 
 h3
   +rem(font-size, 18px)
   line-height: 1.5em
   margin: 0 0 30px
   text-transform: uppercase
+  #page-content &
+    font-family: "BrandonBold"
+    margin: 30px 0 10px
 
 h4
   +rem(font-size, 24px)
@@ -86,6 +92,9 @@ p
   line-height: 28px
   margin-bottom: 20px
   text-align: justify
+  #page-content &
+    margin: 0 0 15px
+    line-height: 25px
 
 address
   line-height: 1.2em
@@ -95,13 +104,15 @@ strong
   font-family: "BrandonBlack"
   font-weight: normal
 
-ul li
-  +rem(font-size, 16px)
-  +rem(line-height, 28px)
-  color: #7e878f
-  margin: 15px 0 0
-  &:first-child
-    margin-top: 0
+ul
+  +rem(font-size, 20px)
+  margin: 0 0 15px 40px
+  li
+    line-height: 25px
+    list-style: disc outside
+    margin: 10px 0 0
+    &:first-child
+      margin-top: 0
 
 sup
   vertical-align: super
