@@ -38,9 +38,11 @@
       </div>
       <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
         <ul id="slider">
-          <li><img src="/assets/img/slider/plan.jpg" alt="Plan des locaux" /></li>
-          <li><img src="/assets/img/slider/bureau-1.jpg" alt="Bureau 1" /></li>
-          <li><img src="/assets/img/slider/bureau-2.jpg" alt="Bureau 2" /></li>
+          <li><img src="/assets/img/slider/image-1.jpg" alt="La bâtisse" /></li>
+          <li><img src="/assets/img/slider/image-2.jpg" alt="Bureau 1" /></li>
+          <li><img src="/assets/img/slider/image-3.jpg" alt="Bureau 2" /></li>
+          <li><img src="/assets/img/slider/image-4.jpg" alt="Plan 3d" /></li>
+          <li><img src="/assets/img/slider/image-5.jpg" alt="Plan 3d" /></li>
         </ul>
       </div>
       <div class="col-xs-12">
@@ -66,7 +68,7 @@
             </div>
             <div class="item col-xs-12 col-sm-6 col-md-3">
               <div>
-                <img src="/assets/img/nomade.png" width="100%" alt="icône nomade" />
+                <img src="/assets/img/ico-board.png" width="100%" alt="icône nomade" />
               </div>
               <h6>Salle de<br />réunion</h6>
             </div>

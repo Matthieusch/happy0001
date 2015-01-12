@@ -6,7 +6,7 @@
       </div>
       <p class="text-center col-xs-12">
         N’hésitez pas à nous contacter pour toute information<br />
-        <a href="mailto:hello@gweno.net">hello<em>[arobase]</em>gweno<em>[point]</em>net</a> ou <a href="mailto:alexis.creuzot@gmail.com">alexis.creuzot<em>[arobase]</em>gmail<em>[point]</em>com</a>
+        <a href="mailto:happyhours.asso@gmail.com" title="Allez viens, on est bien bien bien !">happyhours.asso@gmail.com</a>
       </p>
       <div class="col-xs-12 spacer140"></div>
       <?php
